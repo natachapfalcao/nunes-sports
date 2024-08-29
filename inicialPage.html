@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nunes Sports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header h2 {
+            margin: 5px 0;
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        .search-box input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .product-list-title {
+            font-size: 28px;
+            color: #333;
+            margin: 0;
+        }
+
+        .actions .btn-create {
+            padding: 10px 30px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .actions .btn-create:hover {
+            background-color: #218838;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-edit {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nunes Sports</h1>
+    <h2>Movimente-se com Paixão</h2>
+</header>
+
+<div class="container">
+    <div class="search-box">
+        <input type="text" placeholder="Pesquise produtos...">
+    </div>
+
+    <div class="header-actions">
+        <h3 class="product-list-title">Lista de Produtos</h3>
+        <button class="btn btn-create" onclick="createProduct()">Criar Novo Produto</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Tênis Adidas Response Runner</td>
+                <td>R$ 229,99</td>
+                <td>Estilo e conforto nas corridas e no dia a dia...</td>
+                <td>
+                    <button class="btn btn-edit" onclick="editProduct(1)">Editar</button>
+                    <button class="btn btn-delete" onclick="deleteProduct(1)">Deletar</button>
+                </td>
+            </tr>
+            <!-- Mais registros de produtos aqui -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function createProduct() {
+        // Lógica para criar um novo produto
+        alert("Função para criar um novo produto!");
+    }
+
+    function editProduct(id) {
+        // Lógica para editar o produto com o ID fornecido
+        alert("Função para editar o produto com ID " + id);
+    }
+
+    function deleteProduct(id) {
+        // Lógica para deletar o produto com o ID fornecido
+        alert("Função para deletar o produto com ID " + id);
+    }
+</script>
+
+</body>
+</html>
