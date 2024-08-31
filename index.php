@@ -383,9 +383,10 @@
             .catch(error => 
             {
                 console.error('Erro na requisição:', error);
-                alert('Erro ao deletar o produto. Tente novamente.');
+                alert('Erro ao deletar o produto. Informe ao administrador.');
             });
-        } else {
+        } else 
+        {
             alert('Você precisa digitar "CONFIRMAR" corretamente.');
         }
     }
@@ -417,7 +418,7 @@
                 }
             }
         }
-    }
+}
 
 </script>
 </body>
