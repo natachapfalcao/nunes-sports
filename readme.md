@@ -5,7 +5,7 @@ O projeto Nunes Sports é uma aplicação web desenvolvida para gerenciar produt
 
 ## Tecnologias Utilizadas
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express
+- **Backend**: PHP, XAMPP
 - **Banco de Dados**: MySQL
 - **Ferramentas de Desenvolvimento**: Git, Visual Studio Code
 
@@ -20,10 +20,11 @@ O projeto Nunes Sports é uma aplicação web desenvolvida para gerenciar produt
 
 ### Pré-requisitos
 Certifique-se de ter o seguinte software instalado:
-- [Node.js](https://nodejs.org/)
-- [MySQL](https://www.mysql.com/)
+- [XAMPP](https://nodejs.org/)
+- [MySQL](https://www.mysql.com/) - TIRAR
 - [Git](https://git-scm.com/)
 - Um editor de código, como [Visual Studio Code](https://code.visualstudio.com/)
+- Inportar banco de dados do arquivo "" no MySQL
 
 ### Passos para Configuração do Ambiente Local
 
@@ -48,7 +49,9 @@ Certifique-se de ter o seguinte software instalado:
          name VARCHAR(255) NOT NULL,
          price DECIMAL(10, 2) NOT NULL,
          description TEXT NOT NULL
+         
      );
+     
      ```
 
 4. Atualize as credenciais do banco de dados no arquivo `server.js`:
@@ -92,7 +95,7 @@ Se você deseja contribuir com este projeto, siga os passos abaixo:
 Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
 
 ## Autor
-**Seu Nome** - [seu-email@dominio.com](mailto:seu-email@dominio.com)
+**Natacha Pereira Falcão** - [seu-email@dominio.com](mailto:seu-email@dominio.com)
 
 ---
 
