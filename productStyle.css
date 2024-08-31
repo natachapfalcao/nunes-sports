@@ -1,0 +1,111 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container 
+{
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 
+{
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 
+{
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+form label 
+{
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="number"], form textarea 
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+form input[type="text"]:required, form input[type="number"]:required, form textarea:required 
+{
+    border-color: #ff0000;
+}
+
+.help-text 
+{
+    font-size: 14px;
+    color: #777;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+.actions 
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.actions button 
+{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-save 
+{
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-save:hover 
+{
+    background-color: #218838;
+}
+
+.btn-save-create 
+{
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-save-create:hover 
+{
+    background-color: #0056b3;
+}
+
+.btn-cancel 
+{
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-cancel:hover 
+{
+    background-color: #c82333;
+}
