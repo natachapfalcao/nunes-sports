@@ -355,40 +355,70 @@
 
     function confirmDelete() 
     {
-    const userInput = document.getElementById('confirm-input').value;
-    if (userInput.toLowerCase() === 'confirmar') 
-    {
-        fetch('deleteProduct.php', 
+        const userInput = document.getElementById('confirm-input').value;
+        if (userInput.toLowerCase() === 'confirmar') 
         {
-            method: 'POST',
-            headers: 
+            fetch('deleteProduct.php', 
             {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ id: productIdToDelete })
-        })
-        .then(response => response.json())
-        .then(data => 
-        {
-            if (data.success) 
+                method: 'POST',
+                headers: 
+                {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id: productIdToDelete })
+            })
+                .then(response => response.json())
+                .then(data => 
             {
-                alert('Produto deletado com sucesso!');
-                window.location.href = "index.php"; // Recarrega a página após a deleção
-            } else 
+                if (data.success) 
+                {
+                    alert('Produto deletado com sucesso!');
+                    window.location.href = "index.php"; // Recarrega a página após a deleção
+                } else 
+                {
+                    console.error('Erro:', data.message || 'Erro desconhecido');
+                    alert('Erro ao deletar o produto. Tente novamente.');
+                }
+            })
+            .catch(error => 
             {
-                console.error('Erro:', data.message || 'Erro desconhecido');
+                console.error('Erro na requisição:', error);
                 alert('Erro ao deletar o produto. Tente novamente.');
-            }
-        })
-        .catch(error => 
-        {
-            console.error('Erro na requisição:', error);
-            alert('Erro ao deletar o produto. Tente novamente.');
-        });
-    } else {
-        alert('Você precisa digitar "CONFIRMAR" corretamente.');
+            });
+        } else {
+            alert('Você precisa digitar "CONFIRMAR" corretamente.');
+        }
     }
-}
+    
+    function filterTable() 
+    {
+        // Captura o valor do input de pesquisa e converte para minúsculo para comparação
+        let input = document.getElementById('search-input').value.toLowerCase();
+        let table = document.querySelector('table tbody');
+        let rows = table.getElementsByTagName('tr');
+
+        // Itera por todas as linhas da tabela
+        for (let i = 0; i < rows.length; i++) 
+        {
+            let codigoProduto = rows[i].getElementsByTagName('td')[0];
+            let nomeProduto = rows[i].getElementsByTagName('td')[1];
+            if (codigoProduto || nomeProduto) 
+            {
+                let codigoText = codigoProduto.textContent.toLowerCase();
+                let nomeText = nomeProduto.textContent.toLowerCase();
+
+                // Verifica se o código ou o nome do produto contém o texto de pesquisa
+                if (codigoText.indexOf(input) > -1 || nomeText.indexOf(input) > -1) 
+                {
+                    rows[i].style.display = ''; // Mostra a linha
+                } else 
+                {
+                    rows[i].style.display = 'none'; // Esconde a linha
+                }
+            }
+        }
+    }
+
 </script>
 </body>
 </html>
