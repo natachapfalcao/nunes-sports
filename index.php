@@ -1,5 +1,10 @@
 <?php
-require_once('connection.php'); // Conexão com o banco de dados
+    require_once('connection.php'); // Conexão com o banco de dados
+
+    // Consulta SQL para obter todos os produtos
+    $sql = "SELECT codigo_produto, nome_produto, preco_produto, descricao_produto FROM produtos";
+    $result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -326,8 +331,7 @@ require_once('connection.php'); // Conexão com o banco de dados
 
     function editProduct(id) 
     {
-        window.location.href = "editProduct.php"; 
-        // Redireciona para a página de edição do produto
+        window.location.href = "editProduct.php?codigo=" + id; // Passa o código do produto na URL
     }
 
     function openDeleteModal(id) 
