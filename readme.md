@@ -37,18 +37,15 @@ Certifique-se de ter o seguinte software instalado:
 
 2. Instale e configure o XAMPP:
     - Instale o XAMPP.
-    - No XAMPP é necessário dar start nos modulos "Apache" e "MySQL" (As vezes acontece de dar problema na postas, pois o msn usa a mesma porta do MySQL - Verifique se há outro servidor MySQL em execução. Isso pode ser feito utilizando o Gerenciador de Tarefas do Windows: Abra o Gerenciador de Tarefas (Ctrl + Shift + Esc). Vá até a aba Processos. Procure por um processo chamado mysqld.exe ou mysql.exe. Se encontrar, encerre o processo clicando com o botão direito e escolhendo Finalizar tarefa).
-    - Adicione a parta do projeto na pasta htdocs do xampp que deve estár no seu disco local (caminho normalmente é Disco Local (C:)> xampp > htdocs).
-    <!-- ```bash
-    npm install
-    ``` -->
+    - No XAMPP é necessário dar start nos modulos "Apache" e "MySQL" (As vezes acontece erro na posta 3306 refente ao MySQL, porta padrão usada, informando que já está em uso por outro processo. Para corigir verifique se há outro servidor MySQL em execução. Isso pode ser feito utilizando o Gerenciador de Tarefas do Windows: Abra o Gerenciador de Tarefas (Ctrl + Shift + Esc). Vá até a aba Processos. Procure por um processo chamado mysqld.exe ou mysql.exe. Se encontrar, encerre o processo clicando com o botão direito e escolhendo Finalizar tarefa). Os modulos estarão funcionando quando ficarem verde, somente após isso poderá seguir.
+    - Adicione a pasta do projeto na pasta htdocs do xampp em sua máquina. Normalmente localizada no seu disco local (Disco Local (C:)> xampp > htdocs).
 
 3. Importe o banco de dados no seu MySQL:
-    - Dentro do XAMPP clique em "admin" do MySQL para ser direcionado para a página phpMyAdmin (http://localhost/phpmyadmin/).
+    - Dentro do XAMPP clique em "admin" do modulo MySQL para ser direcionado para a página phpMyAdmin (http://localhost/phpmyadmin/).
     - Na página phpMyAdmin clique em importar para importar o banco de dado.
-    - Escolha o arquivo "" referente ao banco de dado disponibilizado e clique em importar (ao final dessa operação o banco deve aparece nos bancos existente do lado esquerdo da página).
+    - Escolha o arquivo SQL "nunes_sports", referente ao banco de dado disponibilizado e clique em importar (ao final dessa operação o banco de daods deve aparecer nos bancos existente no lado esquerdo da página do phpMyAdmin).
 
-4. Atualize as credenciais do banco de dados no arquivo `connection.php`:
+4. Atualize as credenciais do banco de dados no arquivo `connection.php`: (Se suas credenciais forem difenrentes)
     ```php
     <?php
         $dbHost = 'Localhost';
@@ -60,12 +57,7 @@ Certifique-se de ter o seguinte software instalado:
     ?>
     ```
 
-5. Inicie o servidor Node.js:
-    ```bash
-    node server.js
-    ```
-
-6. Abra o arquivo `index.php` no seu navegador lembrando de obedeçer a url http://localhost/nunes_sports/index.php (http://localhost/pasta/pagina.php) ou utilize uma extensão de servidor local no VS Code para visualizar a página.
+5. Abra o arquivo `index.php` no seu navegador lembrando de obedeçer a url http://localhost/nunes_sports/index.php (http://localhost/pasta_do_projeto/pagina.php).
 
 ## Uso
 - **Pesquisar produtos**: É possivel pesquisar produtos pelo código ou nome do produto.
@@ -86,17 +78,6 @@ Certifique-se de ter o seguinte software instalado:
 ## Melhorias futuras
 - Página de login para o sistema
 - Deletar vários produtos de uma vez
-
-## Contribuindo
-Se você deseja contribuir com este projeto, siga os passos abaixo:
-1. Faça um fork deste repositório.
-2. Crie uma branch para sua feature (`git checkout -b feature/nome-da-feature`).
-3. Commit suas mudanças (`git commit -m 'Adicionei uma nova feature'`).
-4. Faça um push para a branch (`git push origin feature/nome-da-feature`).
-5. Abra um Pull Request.
-
-## Licença
-<!-- Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT). -->
 
 ## Autor
 **Natacha Pereira Falcão** - [natachapfalcao@gmaim.com](mailto:natachapfalcao@gmail.com)
