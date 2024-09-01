@@ -32,7 +32,7 @@ Certifique-se de ter o seguinte software instalado:
 1. Clone o repositório:
     ```bash
     git clone https://github.com/natachapfalcao/nunes-sports
-    cd nunes-sports
+    cd nunes_sports
     ```
 
 2. Instale e configure o XAMPP:
