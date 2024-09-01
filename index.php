@@ -77,8 +77,8 @@
                             echo "<td>R$ " . number_format($row['preco_produto'], 2, ',', '.') . "</td>";
                             echo "<td>" . htmlspecialchars($row['descricao_produto']) . "</td>";
                             echo "<td>
-                                    <button class='btn btn-edit' onclick='editProduct(" . htmlspecialchars($row['codigo_produto']) . ")'>Editar</button>
-                                    <button class='btn btn-delete' onclick='openDeleteModal(" . htmlspecialchars($row['codigo_produto']) . ")'>Deletar</button>
+                                    <button class='btn btn-edit' onclick='editProduct(\"" . htmlspecialchars($row['codigo_produto']) . "\")'>Editar</button>
+                                    <button class='btn btn-delete' onclick='openDeleteModal(\"" . htmlspecialchars($row['codigo_produto']) . "\")'>Deletar</button>
                                 </td>";
                             echo "</tr>";
                         }

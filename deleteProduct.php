@@ -12,7 +12,7 @@
         // Prepara a query para deletar o produto
         $sql = "DELETE FROM produtos WHERE codigo_produto = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $productId);
+        $stmt->bind_param("s", $productId);
 
         if ($stmt->execute()) 
         {

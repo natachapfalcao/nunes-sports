@@ -19,16 +19,20 @@
 
             if ($stmt->execute()) 
             {
-                echo 
-                "<script>
-                    alert ('Produto adicionado com sucesso!');
-                    window.location.href = 'index.php'; 
-                </script>";
-
                 if (isset($_POST['save-create-new'])) 
                 {
-                    echo "<script>alert('Produto salvo! Preparando para adicionar um novo produto.'); window.location.href = 'newProduct.php';</script>";
-                }
+                    echo "<script>
+                            alert('Produto salvo! Preparando para adicionar um novo produto.'); 
+                            window.location.href = 'newProduct.php';
+                          </script>";
+                } else
+                {
+                    echo 
+                    "<script>
+                        alert ('Produto adicionado com sucesso!');
+                        window.location.href = 'index.php'; 
+                    </script>";
+                }   
             } else 
             {
                 echo "Erro ao adicionar produto: " . $stmt->error;
@@ -77,15 +81,9 @@
         </div>
 
         <script>
-            function saveAndCreateNew() 
-            {
-                alert("Produto salvo! Preparando para adicionar um novo produto.");
-                // Lógica para salvar o produto e recarregar a página para adicionar um novo
-            }
-
             function cancel() 
             {
-                window.location.href = "index.php"; // Redireciona para a página 'index.php'
+                window.location.href = "index.php";
             }
         </script>
 
